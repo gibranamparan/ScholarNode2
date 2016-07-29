@@ -1,0 +1,29 @@
+<form class="show">
+	<div class="form-group">
+		<h2> Grupo </h2>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>Nombre</label>
+	<input value="<%= Grupo.nombre %>" name="nombre" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>Turno</label>
+	<input value="<%= Grupo.turno %>" name="turno" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>Numero de alumnos</label>
+	<input value="<%= Grupo.numAlumnos %>" name="numAlumnos" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>Carrera</label>
+	<input value="<%= Grupo.carrera.nombre %>" name="nombre" type="text" class="form-control" disabled/>
+	</div>
+
+</div>
+</div>
+<a href="/Grupo/edit/<%=Grupo.id %>" class="btn btn-default">Edit</a> |
+<a href="/Grupo">Back to list</a>
+</form>

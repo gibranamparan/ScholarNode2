@@ -1,0 +1,48 @@
+<form action="/Pago/<%= accion %>" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Create a Pago</h2>
+	<div>
+		<p><strong>Alumno:</strong>
+		<%= alumno.nombre +" "+alumno.apellidoPaterno %></p>
+	</div>
+<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	<input type="hidden" name="id" value="<%= alumno.id %>">
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="descripcion" name="descripcion">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="cantidad" name="cantidad">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="date" class="form-control" placeholder="fechaPago" name="fechaPago">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<select class="form-control" name="modoPago">
+		<option value="">Modo de pago</option>
+		<option value="Estandar">Estandar</option>
+		<option value="en linea">En linea</option>
+	</select>
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+		<select class="form-control" name="estadoPago">
+		<option value="">Estado de pago</option>
+		<option value="Abono">Abono</option>
+		<option value="pago completo">Pago completo</option>
+	</select>
+	</div>
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/Pago">Back to list</a>
+</form>

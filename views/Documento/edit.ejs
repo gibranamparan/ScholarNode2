@@ -1,0 +1,22 @@
+	<form action="/Documento/update/<%=Documento.id%>" method="POST" class="edit">
+	<div class="form-group">
+		<h2> editing a Documento... </h2>
+		<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Documento.nombre %>" name="nombre" type="text" class="form-control"/>
+	</div>
+
+		</div>
+		<input type="submit" value="Update Documento" class="btn btn-default"/>
+		<a href="/Documento/show/<%=Documento.id %>" class="btn btn-danger">Cancel</a>
+	</form>
+	
+	

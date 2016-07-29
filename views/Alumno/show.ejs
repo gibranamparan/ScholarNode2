@@ -1,0 +1,110 @@
+<form class="show">
+	<div class="form-group">
+		<h2> Alumno </h2>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>nombre</label>
+	<input value="<%= Alumno.nombre %>" name="nombre" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>Apellido paterno</label>
+	<input value="<%= Alumno.apellidoPaterno %>" name="apellidoPaterno" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>Apellido materno</label>
+	<input value="<%= Alumno.apellidoMaterno %>" name="apellidoMaterno" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>Fecha de nacimiento</label>
+	<input value="<%= Alumno.fechaNacimiento %>" name="fechaNacimiento" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.numeroHijos %>" name="numeroHijos" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.sexo %>" name="sexo" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.estadoCivil %>" name="estadoCivil" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.padreTutor %>" name="padreTutor" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.rfc %>" name="rfc" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.curp %>" name="curp" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.etnia %>" name="etnia" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.empresa %>" name="empresa" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.numDependientes %>" name="numDependientes" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.domicilio %>" name="domicilio" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.email %>" name="email" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.inscrito %>" name="inscrito" type="text" class="form-control" disabled/>
+	</div>
+
+</div>
+</div>
+</form>
+<%- partial("../pago/index.ejs") %>
+
+<div>
+	<form action="/DocumentosEntregados/entregaDocumentos">
+		<input type="hidden" name="idAlumno" value="<%= Alumno.id %>">
+
+		<% _.forEach(Documentos, function(Documento) { %>
+		<!--si Documento.id es igual a documentosEntregados se crea un checbox checado por que significa que ya lo tiene sino se crea un checbox sin checar por que significa que no lo tiene
+		 -->
+		<div class="control-group">
+			<label><%= Documento.nombre %></label>
+			<input type="checkbox" class="form-control" name="documentos" value="<%= Documento.id %>"
+			<% _.forEach(Alumno.DocumentosEntregados, function(DocumentosEntregado) { %>
+				<%= DocumentosEntregado.Documento == Documento.id ? 'checked' : '' %> 
+			<% }) %>
+		></div>
+		<% }) %>
+		<button type="submit">Guardar</button>
+
+	</form>
+</div>
+<a href="/Alumno/edit/<%=Alumno.id %>" class="btn btn-default">Edit</a> |
+<a href="/Alumno">Back to list</a>

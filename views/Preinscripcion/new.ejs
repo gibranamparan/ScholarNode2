@@ -1,0 +1,198 @@
+<form action="/Preinscripcion/create" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Create a Preinscripcion</h2>
+
+<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="nombre" name="nombre">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="apellidoPaterno" name="apellidoPaterno">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="apellidoMaterno" name="apellidoMaterno">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="date" class="form-control" placeholder="fechaNacimiento" name="fechaNacimiento">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="number" class="form-control" placeholder="numeroHijos" name="numeroHijos">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<select class="form-control" name="sexo">
+		<option value="M">Masculino</option>
+		<option value="F">Femenino</option>
+	</select>
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<select class="form-control" name="sexo">
+		<option value="">Estado Civil</option>
+		<option value="Soltero">Soltero</option>
+		<option value="Casado">Casado</option>
+		<option value="Divorciado">Divorciado</option>
+		<option value="Viduo">Viduo</option>
+		<option value="Union Libre">Union Libre</option>
+	</select>
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="padreTutor" name="padreTutor">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="rfc" name="rfc">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="curp" name="curp">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="etnia" name="etnia">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="empresa" name="empresa">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="number" class="form-control" placeholder="numDependientes" name="numDependientes">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="domicilio" name="domicilio">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="email" class="form-control" placeholder="email" name="email">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="municipio" name="municipio">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="estado" name="estado">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="pais" name="pais">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<select class="form-control" name="extrangero">
+		<option value="">¿Eres Extranjero?</option>
+		<option value="true">SI</option>
+		<option value="false">NO</option>
+	</select>
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<select class="form-control" name="padresMexicanos">
+		<option value="">¿Los padres son mexicanos?</option>
+		<option value="true">SI</option>
+		<option value="false">NO</option>
+	</select>
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="peso" name="peso">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="estatura" name="estatura">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<select class="form-control" name="tipoSangre">
+		<option value="">Tipo de Sangre</option>
+		<option value="O+">O+</option>
+		<option value="O-">O-</option>
+		<option value="A+">A+</option>
+		<option value="A-">A-</option>
+		<option value="AB+">AB+</option>
+		<option value="AB-">AB-</option>
+		<option value=""></option>
+	</select>
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="antecedentesMedicos" name="antecedentesMedicos">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="capacidadDiferente" name="capacidadDiferente">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="otrosAntecedentes" name="otrosAntecedentes">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="telefonoCasa" name="telefonoCasa">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="telefonoCelular" name="telefonoCelular">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="redSocial" name="redSocial">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="preparatoria" name="preparatoria">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="especialidad" name="especialidad">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="promedioFinal" name="promedioFinal">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="carreraSolicitada" name="carreraSolicitada">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="segundaOpcion" name="segundaOpcion">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="turnoEntrevista" name="turnoEntrevista">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="estadoPago" name="estadoPago">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+		<select class="form-control" name="carrera">
+			<option>Selecciona la carrera</option>
+			<% _.forEach(carreras, function(carrera) { %>
+				<option value="<%= carrera.id %>">
+					<%= carrera.nombre %>
+				</option>
+			<% })%>
+		</select>
+	</div>
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/Preinscripcion">Back to list</a>
+</form>

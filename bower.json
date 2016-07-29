@@ -1,0 +1,21 @@
+{
+  "name": "ScholarNode3",
+  "description": "Aplicacion de gestion escolar.",
+  "main": "app.js",
+  "authors": [
+    "Gibran Amparan"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,0 +1,42 @@
+	<form action="/Pago/update/<%=Pago.id%>" method="POST" class="edit">
+	<div class="form-group">
+		<h2> editing a Pago... </h2>
+		<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.descripcion %>" name="descripcion" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.cantidad %>" name="cantidad" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.fechaPago %>" name="fechaPago" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.modoPago %>" name="modoPago" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.estadoPago %>" name="estadoPago" type="text" class="form-control"/>
+	</div>
+
+		</div>
+		<input type="submit" value="Update Pago" class="btn btn-default"/>
+		<a href="/Pago/show/<%=Pago.id %>" class="btn btn-danger">Cancel</a>
+	</form>
+	
+	

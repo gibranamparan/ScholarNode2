@@ -1,0 +1,97 @@
+	<form action="/Alumno/update/<%=Alumno.id%>" method="POST" class="edit">
+	<div class="form-group">
+		<h2> editing a Alumno... </h2>
+		<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.nombre %>" name="nombre" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.apellidoPaterno %>" name="apellidoPaterno" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.apellidoMaterno %>" name="apellidoMaterno" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.fechaNacimiento %>" name="fechaNacimiento" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.numeroHijos %>" name="numeroHijos" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.sexo %>" name="sexo" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.estadoCivil %>" name="estadoCivil" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.padreTutor %>" name="padreTutor" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.rfc %>" name="rfc" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.curp %>" name="curp" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.etnia %>" name="etnia" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.empresa %>" name="empresa" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.numDependientes %>" name="numDependientes" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.domicilio %>" name="domicilio" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.email %>" name="email" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Alumno.inscrito %>" name="inscrito" type="text" class="form-control"/>
+	</div>
+
+		</div>
+		<input type="submit" value="Update Alumno" class="btn btn-default"/>
+		<a href="/Alumno/show/<%=Alumno.id %>" class="btn btn-danger">Cancel</a>
+	</form>
+	
+	

@@ -1,0 +1,34 @@
+<form class="show">
+	<div class="form-group">
+		<h2> Pago </h2>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.descripcion %>" name="descripcion" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.cantidad %>" name="cantidad" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.fechaPago %>" name="fechaPago" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.modoPago %>" name="modoPago" type="text" class="form-control" disabled/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Pago.estadoPago %>" name="estadoPago" type="text" class="form-control" disabled/>
+	</div>
+
+</div>
+</div>
+<a href="/Pago/edit/<%=Pago.id %>" class="btn btn-default">Edit</a> |
+<a href="/Pago">Back to list</a>
+</form>

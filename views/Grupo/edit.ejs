@@ -1,0 +1,32 @@
+	<form action="/Grupo/update/<%=Grupo.id%>" method="POST" class="edit">
+	<div class="form-group">
+		<h2> editing a Grupo... </h2>
+		<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Grupo.nombre %>" name="nombre" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Grupo.turno %>" name="turno" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= Grupo.numAlumnos %>" name="numAlumnos" type="text" class="form-control"/>
+	</div>
+
+		</div>
+		<input type="submit" value="Update Grupo" class="btn btn-default"/>
+		<a href="/Grupo/show/<%=Grupo.id %>" class="btn btn-danger">Cancel</a>
+	</form>
+	
+	

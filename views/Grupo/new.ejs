@@ -1,0 +1,39 @@
+<form action="/Grupo/create" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Create a Grupo</h2>
+
+<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="nombre" name="nombre">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="turno" name="turno">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="numAlumnos" name="numAlumnos">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+		<select class="form-control" name="carrera">
+			<option>Selecciona la carrera</option>
+			<% _.forEach(carreras, function(carrera) { %>
+				<option value="<%= carrera.id %>">
+					<%= carrera.nombre %>
+				</option>
+			<% })%>
+		</select>
+	</div>
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/Grupo">Back to list</a>
+</form>

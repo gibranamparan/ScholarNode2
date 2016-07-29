@@ -1,0 +1,82 @@
+<form action="/Alumno/create" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Create a Alumno</h2>
+
+<% if(flash && flash.err) { %>
+<ul class="alert alert-error">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="nombre" name="nombre">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="apellidoPaterno" name="apellidoPaterno">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="apellidoMaterno" name="apellidoMaterno">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="date" class="form-control" placeholder="fechaNacimiento" name="fechaNacimiento">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="numeroHijos" name="numeroHijos">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="sexo" name="sexo">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="estadoCivil" name="estadoCivil">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="padreTutor" name="padreTutor">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="rfc" name="rfc">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="curp" name="curp">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="etnia" name="etnia">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="empresa" name="empresa">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="numDependientes" name="numDependientes">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="domicilio" name="domicilio">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="email" name="email">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="inscrito" name="inscrito">
+	</div>
+
+
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/Alumno">Back to list</a>
+</form>

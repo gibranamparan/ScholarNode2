@@ -1,0 +1,135 @@
+/*MOBILE FIRST DESIGN*/
+/*Por defecto el estilo es para movil*/
+#sidebar-wrapper+div.container{
+	padding: 1em 0;
+	width: 100%;
+}
+
+#menu-buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 1em;
+    display: none;
+}
+
+.invisible{
+	/*visibility: hidden !important;*/
+	display: none;
+}
+
+.sidebar-nav li{
+	transition: line-height,text-indent 1s;
+}
+
+.sidebar-nav .glyphicon, .sidebar-nav .fa{
+	font-size: 1.5em;
+}
+
+div#menu-buttons .glyphicon{
+	color: #999999;
+	cursor: pointer;
+}
+
+div#menu-buttons .glyphicon:hover {
+    color: white;
+}
+
+#sidebar-wrapper{
+	overflow: visible;
+	left: 250px;
+}
+
+.sidebar-nav li i{
+	margin-right:.5em;
+}
+
+.sidebar-nav li a, .sidebar-nav .dropdown-menu a{
+	transition: background-color .2s;
+}
+
+.sidebar-nav .dropdown-menu a {
+	color: black;
+}
+
+.sidebar-nav .dropdown-menu a:hover {
+	color: black;
+	background-color: #999;
+}
+
+/*Menu items icons position when sidebarmenu is closed*/
+.sidebar-nav li{
+	text-indent: 5px;
+    line-height: 70px;
+}
+
+div#wrapper.toggled #sidebar-wrapper+div.container{
+	margin-left: 60px;
+	padding-right: 60px;
+}
+
+/*Sidebar overflow setting when sidebarmenu is closed*/
+div#wrapper.toggled div#sidebar-wrapper{
+	overflow: visible;
+}
+
+/*Submenu position when sidebarmenu is closed*/
+.sidebar-nav .dropdown-menu {
+	position: absolute;
+	top:0px;
+	left:45px;
+}
+
+div#wrapper .sidebar-nav li a span{
+	display: none;
+}
+
+div#wrapper .sidebar-nav .sidebar-brand{
+	visibility: hidden;
+}
+
+/*Styles for desktop open-menu*/
+/*AQUI SE PONEN TODOS LOS ESTILOS QUE SE VERAN EN PANTALLA DE
+COMPUTADORA REGULAR*/
+@media(min-width:768px) {
+	div#wrapper.open-menu #sidebar-wrapper+div.container{
+		/*margin-left: auto;*/
+	}
+
+	#menu-buttons{
+		display: block;
+	}
+
+	div#wrapper.open-menu .sidebar-nav li a span{
+		display: inline-block;
+	}
+
+	div#wrapper.open-menu .sidebar-nav .sidebar-brand{
+		visibility: visible;
+	}
+
+	div#wrapper.open-menu .sidebar-nav li {
+	    text-indent: 20px;
+	    line-height: 40px;
+	}
+
+	/*Opened Submenu style customized */
+	div#wrapper.open-menu .sidebar-nav .dropdown-menu {
+	    position: relative;
+	    border-radius: 0px;
+	    width: 100%;
+	    left: 0px;
+	}
+
+	div#wrapper.open-menu #sidebar-wrapper{
+		overflow: hidden;
+		left: 240px;
+	}
+
+
+
+	div#wrapper.open-menu .sidebar-nav{
+		width: 250px;
+	}
+}
