@@ -1,37 +1,34 @@
-<div class="container">
-	<h3>Grupo Listing</h3>
-	<table class='table table-hover table-condensed'>
-	<tr>
+<h3>Grupos</h3>
+<table class='table table-hover table-condensed'>
+<tr>
 
-	<th> nombre </th>
+<th> nombre </th>
 
-	<th> turno </th>
+<th> turno </th>
 
-	<th> numAlumnos </th>
+<th> numAlumnos </th>
 
-	<th></th>
-	<th></th>
-	<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
-	<% _.forEach(Grupos, function(Grupo) { %>
-    		<tr data-id="<%=Grupo.id %>" data-model="Grupo">
-		
-			<td><%= Grupo.nombre%></td>
-		
-			<td><%= Grupo.turno%></td>
-		
-			<td><%= Grupo.numAlumnos%></td>
-		
-			<td><a href="/Grupo/show/<%=Grupo.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
-			<td><a href="/Grupo/edit/<%=Grupo.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
+<% _.forEach(Grupos, function(Grupo) { %>
+		<tr data-id="<%=Grupo.id %>" data-model="Grupo">
+	
+		<td><%= Grupo.nombre%></td>
+	
+		<td><%= Grupo.turno%></td>
+	
+		<td><%= Grupo.numAlumnos%></td>
+	
+		<td><a href="/Grupo/show/<%=Grupo.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
+		<td><a href="/Grupo/edit/<%=Grupo.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
 
-			<td><form action="/Grupo/destroy/<%=Grupo.id %>" method="POST">
-				<input type="hidden" name="_method" value="delete"/>
-				<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
-			</form></td>
-		</tr>
+		<td><form action="/Grupo/destroy/<%=Grupo.id %>" method="POST">
+			<input type="hidden" name="_method" value="delete"/>
+			<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
+		</form></td>
+	</tr>
 <% }) %>
-	</table>
-	<a href="/Grupo/new/" class="btn btn-success btn-sm" role="button">New Grupo</a> |
-	<a href="/">all scaffolds</a>
-</div>
+</table>
+<a href="/Grupo/new/" class="btn btn-success btn-sm" role="button">New Grupo</a>

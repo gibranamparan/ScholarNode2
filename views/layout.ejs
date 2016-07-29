@@ -44,7 +44,7 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#">
+                <a href="/">
                     ScholarNode
                 </a>
             </li>
@@ -54,7 +54,7 @@
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu menu-open">
-                  <li><a href="#">Page 1-1</a></li>
+                  <li><a href="/Alumno/">Busqueda</a></li>
                   <li><a href="#">Page 1-2</a></li> 
                 </ul>
             </li>
@@ -65,7 +65,7 @@
                 <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu menu-open">
-                  <li><a href="#">Page 2-1</a></li>
+                  <li><a href="/Grupo/">Listado</a></li>
                   <li><a href="#">Page 2-2</a></li>
                 </ul>
             </li>
@@ -76,7 +76,7 @@
                 <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu menu-open">
-                  <li><a href="#">Page 3-1</a></li>
+                  <li><a href="/Pago/">Busqueda</a></li>
                   <li><a href="#">Page 3-2</a></li>
                 </ul>
             </li>
@@ -99,7 +99,9 @@
       <!-- /#sidebar-wrapper -->
 
       <!-- Page Content -->
-      <%- body %>
+      <div class="container">
+        <%- body %>
+      </div>
       <!--
           Client-side Templates
           ========================
@@ -152,6 +154,7 @@
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
     <script src="/js/dependencies/jquery.min.js"></script>
+    <script src="/js/angular.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/scripts.js"></script>
     <!--SCRIPTS END-->

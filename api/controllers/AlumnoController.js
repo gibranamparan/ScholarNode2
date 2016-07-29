@@ -62,7 +62,7 @@ module.exports = {
 
       inscrito: req.param('inscrito'),
 
-    }
+    };
 
     // Create a User with the params sent from 
     // the sign-up form --> new.ejs
@@ -72,7 +72,7 @@ module.exports = {
         console.log(err);
         req.session.flash = {
           err: err
-        }
+        };
         return res.redirect('/Alumno/new');
       }
 
@@ -166,7 +166,7 @@ module.exports = {
 
       inscrito: req.param('inscrito'),
 
-    }
+    };
 
     Alumno.update(req.param('id'), paramObj, function AlumnoUpdated(err) {
       if (err) {
@@ -174,7 +174,7 @@ module.exports = {
 
         req.session.flash = {
           err: err
-        }
+        };
 
         return res.redirect('/Alumno/edit/' + req.param('id'));
       }

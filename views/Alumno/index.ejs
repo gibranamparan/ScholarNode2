@@ -1,60 +1,57 @@
-<div class="container">
-	<h3>Alumno</h3>
-	<table class='table table-hover table-condensed'>
-	<tr>
+<h3>Alumno</h3>
+<table class='table table-hover table-condensed'>
+<tr>
 
-	<th> Nombre </th>
+<th> Nombre </th>
 
-	<th> Apellido </th>
+<th> Apellido </th>
 
-	<th> Fecha Nacimiento </th>
+<th> Fecha Nacimiento </th>
 
-	<th> Sexo </th>
+<th> Sexo </th>
 
-	<th> Curp </th>
+<th> Curp </th>
 
-	<th> Domicilio </th>
+<th> Domicilio </th>
 
-	<th> Email </th>
+<th> Email </th>
 
-	<th> Inscrito </th>
+<th> Inscrito </th>
 
-	<th></th>
-	<th></th>
-	<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
-	<% _.forEach(Alumnos, function(Alumno) { %>
-    		<tr data-id="<%=Alumno.id %>" data-model="Alumno">
-		
-			<td><%= Alumno.nombre%></td>
-		
-			<td><%= Alumno.apellidoPaterno +" "+ Alumno.apellidoMaterno%></td>
-		
-			<td><%= sails.moment(Alumno.fechaNacimiento).format('ll')%></td>
-		
-			<td><%= Alumno.domicilio%></td>
-		
-			<td><%= Alumno.email%></td>
-		
-			<td><%= Alumno.inscrito%></td>
-		
-			<td>
-				<a href="/Alumno/show/<%=Alumno.id %>" class="btn btn-primary btn-sm" role="button">Show</a>
-			</td>
-			<td>
-				<a href="/Alumno/edit/<%=Alumno.id %>" class="btn btn-primary btn-sm" role="button">Edit</a>
-			</td>
-			<td>
-				<a href="/Alumno/inscrito/<%=Alumno.id %>" class="btn btn-primary btn-sm" role="button">Inscribir</a>
-			</td>
+<% _.forEach(Alumnos, function(Alumno) { %>
+		<tr data-id="<%=Alumno.id %>" data-model="Alumno">
+	
+		<td><%= Alumno.nombre%></td>
+	
+		<td><%= Alumno.apellidoPaterno +" "+ Alumno.apellidoMaterno%></td>
+	
+		<td><%= sails.moment(Alumno.fechaNacimiento).format('ll')%></td>
+	
+		<td><%= Alumno.domicilio%></td>
+	
+		<td><%= Alumno.email%></td>
+	
+		<td><%= Alumno.inscrito%></td>
+	
+		<td>
+			<a href="/Alumno/show/<%=Alumno.id %>" class="btn btn-primary btn-sm" role="button">Show</a>
+		</td>
+		<td>
+			<a href="/Alumno/edit/<%=Alumno.id %>" class="btn btn-primary btn-sm" role="button">Edit</a>
+		</td>
+		<td>
+			<a href="/Alumno/inscrito/<%=Alumno.id %>" class="btn btn-primary btn-sm" role="button">Inscribir</a>
+		</td>
 
-			<td><form action="/Alumno/destroy/<%=Alumno.id %>" method="POST">
-				<input type="hidden" name="_method" value="delete"/>
-				<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
-			</form></td>
-		</tr>
+		<td><form action="/Alumno/destroy/<%=Alumno.id %>" method="POST">
+			<input type="hidden" name="_method" value="delete"/>
+			<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
+		</form></td>
+	</tr>
 <% }) %>
-	</table>
-	<a href="/Alumno/new/" class="btn btn-success btn-sm" role="button">New Alumno</a> |
-	<a href="/">all scaffolds</a>
-</div> 
+</table>
+<a href="/Alumno/new/" class="btn btn-success btn-sm" role="button">New Alumno</a>

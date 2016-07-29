@@ -1,175 +1,173 @@
-<div class="container">
-	<h3>Preinscripcion Listing</h3>
-	<table class='table table-hover table-condensed'>
-	<tr>
+<h3>Preinscripcion Listing</h3>
+<table class='table table-hover table-condensed'>
+<tr>
 
-	<th> nombre </th>
+<th> nombre </th>
 
-	<th> apellidoPaterno </th>
+<th> apellidoPaterno </th>
 
-	<th> apellidoMaterno </th>
+<th> apellidoMaterno </th>
 
-	<th> fechaNacimiento </th>
+<th> fechaNacimiento </th>
 
-	<th> numeroHijos </th>
+<th> numeroHijos </th>
 
-	<th> sexo </th>
+<th> sexo </th>
 
-	<th> estadoCivil </th>
+<th> estadoCivil </th>
 
-	<th> padreTutor </th>
+<th> padreTutor </th>
 
-	<th> rfc </th>
+<th> rfc </th>
 
-	<th> curp </th>
+<th> curp </th>
 
-	<th> etnia </th>
+<th> etnia </th>
 
-	<th> empresa </th>
+<th> empresa </th>
 
-	<th> numDependientes </th>
+<th> numDependientes </th>
 
-	<th> domicilio </th>
+<th> domicilio </th>
 
-	<th> email </th>
+<th> email </th>
 
-	<th> municipio </th>
+<th> municipio </th>
 
-	<th> estado </th>
+<th> estado </th>
 
-	<th> pais </th>
+<th> pais </th>
 
-	<th> extrangero </th>
+<th> extrangero </th>
 
-	<th> padresMexicanos </th>
+<th> padresMexicanos </th>
 
-	<th> peso </th>
+<th> peso </th>
 
-	<th> estatura </th>
+<th> estatura </th>
 
-	<th> tipoSangre </th>
+<th> tipoSangre </th>
 
-	<th> antecedentesMedicos </th>
+<th> antecedentesMedicos </th>
 
-	<th> capacidadDiferente </th>
+<th> capacidadDiferente </th>
 
-	<th> otrosAntecedentes </th>
+<th> otrosAntecedentes </th>
 
-	<th> telefonoCasa </th>
+<th> telefonoCasa </th>
 
-	<th> telefonoCelular </th>
+<th> telefonoCelular </th>
 
-	<th> redSocial </th>
+<th> redSocial </th>
 
-	<th> preparatoria </th>
+<th> preparatoria </th>
 
-	<th> especialidad </th>
+<th> especialidad </th>
 
-	<th> promedioFinal </th>
+<th> promedioFinal </th>
 
-	<th> carreraSolicitada </th>
+<th> carreraSolicitada </th>
 
-	<th> segundaOpcion </th>
+<th> segundaOpcion </th>
 
-	<th> turnoEntrevista </th>
+<th> turnoEntrevista </th>
 
-	<th> estadoPago </th>
+<th> estadoPago </th>
 
-	<th> Carrera </th>
+<th> Carrera </th>
 
-	<th></th>
-	<th></th>
-	<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
-	<% _.forEach(Preinscripcions, function(Preinscripcion) { %>
-    		<tr data-id="<%=Preinscripcion.id %>" data-model="Preinscripcion">
-		
-			<td><%= Preinscripcion.nombre%></td>
-		
-			<td><%= Preinscripcion.apellidoPaterno%></td>
-		
-			<td><%= Preinscripcion.apellidoMaterno%></td>
-		
-			<td><%= Preinscripcion.fechaNacimiento%></td>
-		
-			<td><%= Preinscripcion.numeroHijos%></td>
-		
-			<td><%= Preinscripcion.sexo%></td>
-		
-			<td><%= Preinscripcion.estadoCivil%></td>
-		
-			<td><%= Preinscripcion.padreTutor%></td>
-		
-			<td><%= Preinscripcion.rfc%></td>
-		
-			<td><%= Preinscripcion.curp%></td>
-		
-			<td><%= Preinscripcion.etnia%></td>
-		
-			<td><%= Preinscripcion.empresa%></td>
-		
-			<td><%= Preinscripcion.numDependientes%></td>
-		
-			<td><%= Preinscripcion.domicilio%></td>
-		
-			<td><%= Preinscripcion.email%></td>
-		
-			<td><%= Preinscripcion.municipio%></td>
-		
-			<td><%= Preinscripcion.estado%></td>
-		
-			<td><%= Preinscripcion.pais%></td>
-		
-			<td><%= Preinscripcion.extrangero%></td>
-		
-			<td><%= Preinscripcion.padresMexicanos%></td>
-		
-			<td><%= Preinscripcion.peso%></td>
-		
-			<td><%= Preinscripcion.estatura%></td>
-		
-			<td><%= Preinscripcion.tipoSangre%></td>
-		
-			<td><%= Preinscripcion.antecedentesMedicos%></td>
-		
-			<td><%= Preinscripcion.capacidadDiferente%></td>
-		
-			<td><%= Preinscripcion.otrosAntecedentes%></td>
-		
-			<td><%= Preinscripcion.telefonoCasa%></td>
-		
-			<td><%= Preinscripcion.telefonoCelular%></td>
-		
-			<td><%= Preinscripcion.redSocial%></td>
-		
-			<td><%= Preinscripcion.preparatoria%></td>
-		
-			<td><%= Preinscripcion.especialidad%></td>
-		
-			<td><%= Preinscripcion.promedioFinal%></td>
-		
-			<td><%= Preinscripcion.carreraSolicitada%></td>
-		
-			<td><%= Preinscripcion.segundaOpcion%></td>
-		
-			<td><%= Preinscripcion.turnoEntrevista%></td>
-		
-			<td><%= Preinscripcion.estadoPago%></td>
-			<% console.log(Preinscripcion.estadoPago)%>
+<% _.forEach(Preinscripcions, function(Preinscripcion) { %>
+		<tr data-id="<%=Preinscripcion.id %>" data-model="Preinscripcion">
+	
+		<td><%= Preinscripcion.nombre%></td>
+	
+		<td><%= Preinscripcion.apellidoPaterno%></td>
+	
+		<td><%= Preinscripcion.apellidoMaterno%></td>
+	
+		<td><%= Preinscripcion.fechaNacimiento%></td>
+	
+		<td><%= Preinscripcion.numeroHijos%></td>
+	
+		<td><%= Preinscripcion.sexo%></td>
+	
+		<td><%= Preinscripcion.estadoCivil%></td>
+	
+		<td><%= Preinscripcion.padreTutor%></td>
+	
+		<td><%= Preinscripcion.rfc%></td>
+	
+		<td><%= Preinscripcion.curp%></td>
+	
+		<td><%= Preinscripcion.etnia%></td>
+	
+		<td><%= Preinscripcion.empresa%></td>
+	
+		<td><%= Preinscripcion.numDependientes%></td>
+	
+		<td><%= Preinscripcion.domicilio%></td>
+	
+		<td><%= Preinscripcion.email%></td>
+	
+		<td><%= Preinscripcion.municipio%></td>
+	
+		<td><%= Preinscripcion.estado%></td>
+	
+		<td><%= Preinscripcion.pais%></td>
+	
+		<td><%= Preinscripcion.extrangero%></td>
+	
+		<td><%= Preinscripcion.padresMexicanos%></td>
+	
+		<td><%= Preinscripcion.peso%></td>
+	
+		<td><%= Preinscripcion.estatura%></td>
+	
+		<td><%= Preinscripcion.tipoSangre%></td>
+	
+		<td><%= Preinscripcion.antecedentesMedicos%></td>
+	
+		<td><%= Preinscripcion.capacidadDiferente%></td>
+	
+		<td><%= Preinscripcion.otrosAntecedentes%></td>
+	
+		<td><%= Preinscripcion.telefonoCasa%></td>
+	
+		<td><%= Preinscripcion.telefonoCelular%></td>
+	
+		<td><%= Preinscripcion.redSocial%></td>
+	
+		<td><%= Preinscripcion.preparatoria%></td>
+	
+		<td><%= Preinscripcion.especialidad%></td>
+	
+		<td><%= Preinscripcion.promedioFinal%></td>
+	
+		<td><%= Preinscripcion.carreraSolicitada%></td>
+	
+		<td><%= Preinscripcion.segundaOpcion%></td>
+	
+		<td><%= Preinscripcion.turnoEntrevista%></td>
+	
+		<td><%= Preinscripcion.estadoPago%></td>
+		<% console.log(Preinscripcion.estadoPago)%>
 <% console.log(Preinscripcion.carrera.nombre)%>
-			<td><%= Preinscripcion.carrera.nombre%></td>
-		
-			<td><a href="/Preinscripcion/show/<%=Preinscripcion.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
-			<td><a href="/Preinscripcion/edit/<%=Preinscripcion.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
-			<td><a href="/Pago/validarPago/<%=Preinscripcion.id %>"  class="btn btn-primary btn-sm" role="button">Validar pago</a></td>
+		<td><%= Preinscripcion.carrera.nombre%></td>
+	
+		<td><a href="/Preinscripcion/show/<%=Preinscripcion.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
+		<td><a href="/Preinscripcion/edit/<%=Preinscripcion.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
+		<td><a href="/Pago/validarPago/<%=Preinscripcion.id %>"  class="btn btn-primary btn-sm" role="button">Validar pago</a></td>
 
-			<td><form action="/Preinscripcion/destroy/<%=Preinscripcion.id %>" method="POST">
-				<input type="hidden" name="_method" value="delete"/>
-				<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
-			</form></td>
-		</tr>
+		<td><form action="/Preinscripcion/destroy/<%=Preinscripcion.id %>" method="POST">
+			<input type="hidden" name="_method" value="delete"/>
+			<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
+		</form></td>
+	</tr>
 <% }) %>
-	</table>
-	<a href="/Preinscripcion/new/" class="btn btn-success btn-sm" role="button">New Preinscripcion</a> |
-	<a href="/">all scaffolds</a>
-</div>
+</table>
+<a href="/Preinscripcion/new/" class="btn btn-success btn-sm" role="button">New Preinscripcion</a> |
+<a href="/">all scaffolds</a>

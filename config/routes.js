@@ -34,8 +34,11 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
-
+  },
+  
+  'GET /Pago/validarPago/:id': 'PagoController.formPagoPreinscrito',
+  
+  'POST /Pago/validarPago': 'PagoController.validarPagoPreinscrito',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

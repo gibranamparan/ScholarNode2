@@ -1,45 +1,42 @@
-<div class="container">
-	<h3>Pago Listing</h3>
-	<table class='table table-hover table-condensed'>
-	<tr>
+<h3>Pago</h3>
+<table class='table table-hover table-condensed'>
+<tr>
 
-	<th> descripcion </th>
+<th> Descripcion </th>
 
-	<th> cantidad </th>
+<th> Cantidad </th>
 
-	<th> fechaPago </th>
+<th> Fecha Pago </th>
 
-	<th> modoPago </th>
+<th> Modo Pago </th>
 
-	<th> estadoPago </th>
+<th> Estado Pago </th>
 
-	<th></th>
-	<th></th>
-	<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
-	<% _.forEach(Pagos, function(Pago) { %>
-    		<tr data-id="<%=Pago.id %>" data-model="Pago">
-		
-			<td><%= Pago.descripcion%></td>
-		
-			<td><%= Pago.cantidad%></td>
-		
-			<td><%= Pago.fechaPago%></td>
-		
-			<td><%= Pago.modoPago%></td>
-		
-			<td><%= Pago.estadoPago%></td>
-		
-			<td><a href="/Pago/show/<%=Pago.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
-			<td><a href="/Pago/edit/<%=Pago.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
+<% _.forEach(Pagos, function(Pago) { %>
+		<tr data-id="<%=Pago.id %>" data-model="Pago">
+	
+		<td><%= Pago.descripcion?Pago.descripcion:'Sin Descripcion' %></td>
+	
+		<td><%= Pago.cantidad%></td>
+	
+		<td><%= sails.moment(Pago.fechaPago).format('ll')%></td>
+	
+		<td><%= Pago.modoPago%></td>
+	
+		<td><%= Pago.estadoPago%></td>
+	
+		<td><a href="/Pago/show/<%=Pago.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
+		<td><a href="/Pago/edit/<%=Pago.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
 
-			<td><form action="/Pago/destroy/<%=Pago.id %>" method="POST">
-				<input type="hidden" name="_method" value="delete"/>
-				<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
-			</form></td>
-		</tr>
+		<td><form action="/Pago/destroy/<%=Pago.id %>" method="POST">
+			<input type="hidden" name="_method" value="delete"/>
+			<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
+		</form></td>
+	</tr>
 <% }) %>
-	</table>
-	<a href="/Pago/new/" class="btn btn-success btn-sm" role="button">New Pago</a> |
-	<a href="/">all scaffolds</a>
-</div>
+</table>
+<a href="/Pago/new/" class="btn btn-success btn-sm" role="button">New Pago</a>
