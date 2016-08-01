@@ -1,0 +1,28 @@
+<% if (errors) {%>
+  <% errors.forEach(function (error) { %>
+    <%= __(error) %>
+  <% }) %>
+<% } %>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Registro de Nuevo Usuario
+  </div>
+  <div class="panel-body">
+	<form role="form" action="/auth/local/register" method="post">
+		<div class="form-group">
+			<label for="username">Nombre de Usuario: </label>
+			<input class="form-control" type="text" name="username" placeholder="Username">
+		</div>
+		<div class="form-group">
+			<label for="email">Email: </label>
+			<input class="form-control" type="text" name="email" placeholder="Email">
+		</div>
+		<div class="form-group">
+			<label for="password">Contraseña: </label>
+			<input class="form-control" type="password" name="password" placeholder="Password">
+		</div>
+		<button type="submit" class="btn btn-primary">Sign Up</button>
+	</form>
+  </div>
+</div>

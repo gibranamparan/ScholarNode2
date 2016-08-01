@@ -35,10 +35,6 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
-  
-  'GET /Pago/validarPago/:id': 'PagoController.formPagoPreinscrito',
-  
-  'POST /Pago/validarPago': 'PagoController.validarPagoPreinscrito',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
@@ -48,5 +44,19 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  //Rutas del controlador de pagos
+  'GET /Pago/validarPago/:id': 'PagoController.formPagoPreinscrito',
+  'POST /Pago/validarPago': 'PagoController.validarPagoPreinscrito',
+
+  //Rutas del controlador de autentificacion
+  'get /login': 'AuthController.login',
+  'get /logout': 'AuthController.logout',
+  'get /register': 'AuthController.register',
+
+  'post /auth/local': 'AuthController.callback',
+  'post /auth/local/:action': 'AuthController.callback',
+
+  'get /auth/:provider': 'AuthController.provider',
+  'get /auth/:provider/callback': 'AuthController.callback',
 
 };

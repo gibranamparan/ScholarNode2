@@ -1,7 +1,7 @@
 /*MOBILE FIRST DESIGN*/
 /*Por defecto el estilo es para movil*/
 #sidebar-wrapper+div.container{
-	padding: 1em 0;
+	padding: 1em 1em;
 	width: 100%;
 }
 
@@ -88,6 +88,11 @@ div#wrapper .sidebar-nav li a span{
 div#wrapper .sidebar-nav .sidebar-brand{
 	visibility: hidden;
 }
+
+/*Estilos de formularios*/
+/*.panel-primary{
+	background-color: #00a886;
+}*/
 
 /*Styles for desktop open-menu*/
 /*AQUI SE PONEN TODOS LOS ESTILOS QUE SE VERAN EN PANTALLA DE
