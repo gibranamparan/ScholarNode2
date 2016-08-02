@@ -1,9 +1,3 @@
-<% if (errors) {%>
-  <% errors.forEach(function (error) { %>
-    <%= __(error) %>
-  <% }) %>
-<% } %>
-
 <div class="panel panel-primary">
   <div class="panel-heading">
     Registro de Nuevo Usuario
@@ -26,3 +20,11 @@
 	</form>
   </div>
 </div>
+<% if (errors.length>0) {%>
+	<div class="alert alert-warning">
+	  <% errors.forEach(function (error) { %>
+	    <%= __(error) %>
+	  <% }) %>
+	</div>
+<% } %>
+
