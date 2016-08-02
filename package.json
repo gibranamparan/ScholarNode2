@@ -31,7 +31,8 @@
     "sails-generate-scaffold": "git+https://github.com/marlonscalabrin/sails-generate-scaffold.git",
     "sails-hook-autoreload": "^0.13.2",
     "sails-mongo": "^0.12.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "validator": "^5.5.0"
   },
   "scripts": {
     "debug": "node debug app.js",

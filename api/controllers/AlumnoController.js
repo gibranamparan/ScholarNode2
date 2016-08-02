@@ -112,10 +112,12 @@ module.exports = {
     Alumno.find(function foundAlumnos(err, Alumnos) {
       if (err) return next(err);
       
-      res.view({
-        Alumnos: Alumnos
-      });
+      res.json(Alumnos);
     });
+  },
+
+  listado: function(req, res) {
+    res.view('Alumno/listado');
   },
 
   edit: function(req, res, next) {

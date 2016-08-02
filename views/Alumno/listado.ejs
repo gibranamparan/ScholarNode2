@@ -1,0 +1,36 @@
+	
+	<h3>Alumno</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				<th> Nombre </th>
+
+				<th> Apellido </th>
+
+				<th> Fecha Nacimiento </th>
+
+				<th> Sexo </th>
+
+				<th> Curp </th>
+
+				<th> Domicilio </th>
+
+				<th> Email </th>
+
+				<th> Inscrito </th>
+			</tr>
+		</thead>
+		<tbody >
+			<tr ng-repeat="alumno in alumnos" ng-controller="AlumnoController">
+				<td>{{alumno.nombre}}</td>
+				<td>{{alumno.apellidoPaterno+" "+alumno.apellidoMaterno}}</td>
+				<td>{{alumno.fechaNacimiento}}</td>
+				<td>{{alumno.sexo}}</td>
+				<td>{{alumno.curp}}</td>
+				<td>{{alumno.domicilio}}</td>
+				<td>{{alumno.email}}</td>
+				<td>{{alumno.inscrito}}</td>
+			</tr>
+
+		</tbody>
+	</table>

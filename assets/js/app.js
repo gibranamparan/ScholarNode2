@@ -1,13 +1,13 @@
 (function () {
   'use strict';
   var app = angular.module('scholarNode', [
-    'ngRoute',
+   /** 'ngRoute',  */
     'scholarNode.controllers',
     'scholarNode.directives',
     'scholarNode.filters',
     'scholarNode.services'
   ])
-  
+  /**
   app.config(['$routeProvider', function ($routeProvider) {
 
 
@@ -24,6 +24,6 @@
         });
 
     }]);
-
+    */
 
 })();

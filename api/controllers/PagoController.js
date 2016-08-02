@@ -158,9 +158,8 @@ module.exports = {
     Pago.find(function foundPagos(err, Pagos) {
       if (err) return next(err);
       
-      res.view({
-        Pagos: Pagos
-      });
+      res.json(Pagos);
+      
     });
   },
 
