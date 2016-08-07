@@ -15,8 +15,11 @@
 		<div class="panel-heading">
 			Login
 		</div>
+	<fieldset>
+		<legend><h1>Datos Personales</h1></legend>
 		<div class="panel-body">
 			<div class="col-md-6">
+
 				<div class="control-group">
 					<label for="nombre">Nombre: </label>
 					<input type="text" class="form-control" placeholder="Nombre" name="nombre">
@@ -83,9 +86,15 @@
 				</div>
 
 				<div class="control-group">
+					<label for="redSocial">Red Social: </label>
+					<input type="text" class="form-control" placeholder="redSocial" name="redSocial">
+				</div>
+				<div class="control-group">
 					<label for="curp">Empresa: </label>
 					<input type="text" class="form-control" placeholder="empresa" name="empresa">
 				</div>
+			</div>
+				<div class="col-md-6">
 
 				<div class="control-group">
 					<label for="curp">Num. Dependientes: </label>
@@ -116,9 +125,9 @@
 					<label for="pais">País: </label>
 					<input type="text" class="form-control" placeholder="pais" name="pais">
 				</div>
-			</div>
+			
 
-			<div class="col-md-6">
+			
 				<div class="control-group">
 					<label for="extrangero">¿Eres Extranjero?</label>
 					<select class="form-control" name="extrangero">
@@ -148,6 +157,21 @@
 				</div>
 
 				<div class="control-group">
+					<label for="telefonoCasa">Telefono Casa: </label>
+					<input type="text" class="form-control" placeholder="telefonoCasa" name="telefonoCasa">
+				</div>
+
+				<div class="control-group">
+					<label for="telefonoCasa">Telefono Celular: </label>
+					<input type="text" class="form-control" placeholder="telefonoCelular" name="telefonoCelular">
+				</div>
+
+
+			</div>
+			</fieldset>
+			<fieldset>
+				<legend><h1>Informacion de Salud</h1></legend>
+				<div class="control-group">
 					<label for="estatura">Tipo de Sangre: </label>
 					<select class="form-control" name="tipoSangre">
 						<option value="">Tipo de Sangre</option>
@@ -176,21 +200,9 @@
 					<input type="text" class="form-control" placeholder="otrosAntecedentes" name="otrosAntecedentes">
 				</div>
 
-				<div class="control-group">
-					<label for="telefonoCasa">Telefono Casa: </label>
-					<input type="text" class="form-control" placeholder="telefonoCasa" name="telefonoCasa">
-				</div>
-
-				<div class="control-group">
-					<label for="telefonoCasa">Telefono Celular: </label>
-					<input type="text" class="form-control" placeholder="telefonoCelular" name="telefonoCelular">
-				</div>
-
-				<div class="control-group">
-					<label for="redSocial">Red Social: </label>
-					<input type="text" class="form-control" placeholder="redSocial" name="redSocial">
-				</div>
-
+			</fieldset>
+		<fieldset>
+			<legend> <h1>Escuela de Procedencia</h1></legend>
 				<div class="control-group">
 					<label for="preparatoria">Preparatoria: </label>
 					<input type="text" class="form-control" placeholder="preparatoria" name="preparatoria">
@@ -205,7 +217,9 @@
 					<label for="promedioFinal">Promedio Final: </label>
 					<input type="text" class="form-control" placeholder="promedioFinal" name="promedioFinal">
 				</div>
-
+		</fieldset>
+		<fieldset>
+			<legend> <h1>Carrera que Solicita</h1></legend>
 				<div class="control-group">
 					<label for="carreraSolicitada">Carrera Solicitada: </label>
 					<input type="text" class="form-control" placeholder="carreraSolicitada" name="carreraSolicitada">
@@ -237,6 +251,8 @@
 						<% })%>
 					</select>
 				</div>
+			</fieldset>
+
 			</div>
 		</div>
 	</div>
