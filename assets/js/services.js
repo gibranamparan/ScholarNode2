@@ -1,43 +1,27 @@
 (function () {
 
   angular.module('scholarNode.services', [])
-    .factory('alumnoService', ['$http', '$q', function ($htpp, $q){
+  .factory('alumnoService', ['$http', '$q', function ($htpp, $q){
 
-      function allAlumnos() {
-        var deferred = $q.defer();
-        $http.get('http://localhost:1337/alumno')
-          .success(function (data) {
-            alert('hola');
-           
-            deferred.resolve(data);
-          });
-        return deferred.promise;  
-      }
+    var getAlumnos = function() {
+      var defer = $q.defer();
 
-       return {
-        allAlumnos: allAlumnos
-   
-      };
-    }])
-    .factory('pagoService', ['$http', '$q', function ($http, $q) {
+      $http.get('/alumno').then(function(response) {
+        defer.resolve(response.data);
+      }, function(response) {
+        defer.reject(response);
+      });
 
-      function allPagos() {
-       /** $q es la libreria de las promesas, donde se crea una variable para resolver la promesa */
-        var deferred = $q.defer();
-        $http.get('/Pago')
-          .success(function (data) {
-            deferred.resolve(data);
-          });
-        return deferred.promise;
-      }
-      
+      return defer.promise;
+    };
+
+    return {
+      getAlumnos: getAlumnos
+    }
+  }]);
 
 
-      return {
-        allPagos: allPagos
-      };
-
-    }])
-    
 
 })();
+
+
