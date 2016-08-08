@@ -1,7 +1,7 @@
 
-<div class="container" ng-controller="AlumnoController">
+<div class="container" ng-controller="AlumnoController" >
 	<h3>Alumno</h3>
-	<table class="table">
+	<table id="tableAlumno" class="display" cellspacing="0" width="100%">
 		<thead>
 			<tr>
 				<th> Nombre </th>
@@ -21,6 +21,25 @@
 				<th> Inscrito </th>
 			</tr>
 		</thead>
+		<tfoot>
+			<tr>
+				<th> Nombre </th>
+
+				<th> Apellido </th>
+
+				<th> Fecha Nacimiento </th>
+
+				<th> Sexo </th>
+
+				<th> Curp </th>
+
+				<th> Domicilio </th>
+
+				<th> Email </th>
+
+				<th> Inscrito </th>
+			</tr>
+		</tfoot>
 		<tbody >
 			<tr ng-repeat="alumno in alumnos">
 				<td>{{alumno.nombre}}</td>

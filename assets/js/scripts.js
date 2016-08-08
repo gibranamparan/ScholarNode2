@@ -17,3 +17,9 @@ function toggleMenu(){
 $('.sidebar-nav li.dropdown').click(function(){
 	$(this).children('.dropdown-menu').slideToggle();
 });
+
+//Función para correr los servicios de DataTable en la lista de Alumnos,
+// mostandolos en una tabla de registros.
+$(document).ready(function() {
+    $('#tableAlumno').DataTable();
+} );

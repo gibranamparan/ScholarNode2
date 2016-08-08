@@ -9,6 +9,10 @@
 			$scope.alumnos = data;
 		})
 
+		$scope.gridOptions = {
+			data: 'alumnos'
+		};
+
 	}])                                                         
 	.controller('PagoController', ['$scope', 'pagoService', function ($scope, pagoService) {
 
