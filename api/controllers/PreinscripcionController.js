@@ -91,7 +91,7 @@ module.exports = {
 
       turnoEntrevista: req.param('turnoEntrevista'),
 
-      estadoPago: req.param('estadoPago'),
+      estadoPago: false,
 
       carrera:req.param('carrera')
 

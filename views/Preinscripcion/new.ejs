@@ -1,7 +1,4 @@
 <form action="/Preinscripcion/create" method="POST" role="form" class="new">
-	<div class="form-group">
-	<h2>Create a Preinscripcion</h2>
-
 	<% if(flash && flash.err) { %>
 		<ul class="alert alert-success">
 		<% Object.keys(flash.err).forEach(function(error) { %>
@@ -13,12 +10,12 @@
 	<% } %>
 	<div class="panel panel-primary">
 		<div class="panel-heading">
-			Login
+			<h3>Formato de Preinscripcion</h3>
 		</div>
-	<fieldset>
-		<legend><h1>Datos Personales</h1></legend>
 		<div class="panel-body">
-			<div class="col-md-6">
+		<fieldset>
+			<legend>Datos Personales</legend>
+			<div class="col-sm-6">
 
 				<div class="control-group">
 					<label for="nombre">Nombre: </label>
@@ -94,8 +91,7 @@
 					<input type="text" class="form-control" placeholder="empresa" name="empresa">
 				</div>
 			</div>
-				<div class="col-md-6">
-
+			<div class="col-sm-6">
 				<div class="control-group">
 					<label for="curp">Num. Dependientes: </label>
 					<input type="number" class="form-control" placeholder="numDependientes" name="numDependientes">
@@ -125,9 +121,6 @@
 					<label for="pais">País: </label>
 					<input type="text" class="form-control" placeholder="pais" name="pais">
 				</div>
-			
-
-			
 				<div class="control-group">
 					<label for="extrangero">¿Eres Extranjero?</label>
 					<select class="form-control" name="extrangero">
@@ -136,7 +129,6 @@
 						<option value="false">NO</option>
 					</select>
 				</div>
-
 				<div class="control-group">
 					<label for="padresMexicanos">¿Los padres son mexicanos?</label>
 					<select class="form-control" name="padresMexicanos">
@@ -145,32 +137,27 @@
 						<option value="false">NO</option>
 					</select>
 				</div>
-
 				<div class="control-group">
 					<label for="padresMexicanos">Peso: </label>
 					<input type="text" class="form-control" placeholder="Padres Mexicanos" name="padresMexicanos">
 				</div>
-
 				<div class="control-group">
 					<label for="estatura">Estatura: </label>
 					<input type="text" class="form-control" placeholder="estatura" name="estatura">
 				</div>
-
 				<div class="control-group">
 					<label for="telefonoCasa">Telefono Casa: </label>
 					<input type="text" class="form-control" placeholder="telefonoCasa" name="telefonoCasa">
 				</div>
-
 				<div class="control-group">
 					<label for="telefonoCasa">Telefono Celular: </label>
 					<input type="text" class="form-control" placeholder="telefonoCelular" name="telefonoCelular">
 				</div>
-
-
 			</div>
-			</fieldset>
-			<fieldset>
-				<legend><h1>Informacion de Salud</h1></legend>
+		</fieldset>
+		<fieldset>
+			<legend>Informacion de Salud</legend>
+			<div class="col-sm-6">
 				<div class="control-group">
 					<label for="estatura">Tipo de Sangre: </label>
 					<select class="form-control" name="tipoSangre">
@@ -189,20 +176,21 @@
 					<label for="antecedentesMedicos">Antecedentes Medicos: </label>
 					<input type="text" class="form-control" placeholder="antecedentesMedicos" name="antecedentesMedicos">
 				</div>
-
+			</div>
+			<div class="col-sm-6">
 				<div class="control-group">
 					<label for="capacidadDiferente">Capacidad Diferente: </label>
 					<input type="text" class="form-control" placeholder="capacidadDiferente" name="capacidadDiferente">
 				</div>
-
 				<div class="control-group">
 					<label for="otrosAntecedentes">Otros Antecedentes: </label>
 					<input type="text" class="form-control" placeholder="otrosAntecedentes" name="otrosAntecedentes">
 				</div>
-
-			</fieldset>
+			</div>
+		</fieldset>
 		<fieldset>
-			<legend> <h1>Escuela de Procedencia</h1></legend>
+			<legend>Escuela de Procedencia</legend>
+			<div class="col-sm-6">
 				<div class="control-group">
 					<label for="preparatoria">Preparatoria: </label>
 					<input type="text" class="form-control" placeholder="preparatoria" name="preparatoria">
@@ -212,37 +200,20 @@
 					<label for="especialidad">Especialidad: </label>
 					<input type="text" class="form-control" placeholder="especialidad" name="especialidad">
 				</div>
-
+			</div>
+			<div class="col-sm-6">
 				<div class="control-group">
 					<label for="promedioFinal">Promedio Final: </label>
 					<input type="text" class="form-control" placeholder="promedioFinal" name="promedioFinal">
 				</div>
+			</div>
 		</fieldset>
 		<fieldset>
-			<legend> <h1>Carrera que Solicita</h1></legend>
+			<legend>Carrera que Solicita</legend>
+			<div class="col-sm-6">
 				<div class="control-group">
 					<label for="carreraSolicitada">Carrera Solicitada: </label>
-					<input type="text" class="form-control" placeholder="carreraSolicitada" name="carreraSolicitada">
-				</div>
-
-				<div class="control-group">
-					<label for="segundaOpcion">Segunda Opcion: </label>
-					<input type="text" class="form-control" placeholder="segundaOpcion" name="segundaOpcion">
-				</div>
-
-				<div class="control-group">
-					<label for="turnoEntrevista">Turno Entrevista: </label>
-					<input type="text" class="form-control" placeholder="turnoEntrevista" name="turnoEntrevista">
-				</div>
-
-				<div class="control-group">
-					<label for="estadoPago">Estado Pago: </label>
-					<input type="text" class="form-control" placeholder="estadoPago" name="estadoPago">
-				</div>
-
-				<div class="control-group">
-					<label for="carrera">Carrera: </label>
-					<select class="form-control" name="carrera">
+					<select class="form-control" name="carreraSolicitada">
 						<option>Selecciona la carrera</option>
 						<% _.forEach(carreras, function(carrera) { %>
 							<option value="<%= carrera.id %>">
@@ -251,12 +222,31 @@
 						<% })%>
 					</select>
 				</div>
-			</fieldset>
-
+				<div class="control-group">
+					<label for="segundaOpcion">Segunda Opcion: </label>
+					<select class="form-control" name="segundaOpcion">
+						<option>Selecciona la carrera</option>
+						<% _.forEach(carreras, function(carrera) { %>
+							<option value="<%= carrera.id %>">
+								<%= carrera.nombre %>
+							</option>
+						<% })%>
+					</select>
+				</div>
 			</div>
+			<div class="col-sm-6">
+				<div class="control-group">
+					<label for="turnoEntrevista">Turno Entrevista: </label>
+					<select class="form-control" name="turnoEntrevista">
+						<option value="Matutino">Matutino</option>
+						<option value="Vespertino">Vespertino</option>
+					</select>
+				</div>
+			</div>
+		</fieldset>
 		</div>
 	</div>
 
-	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<button type="submit" class="btn btn-primary">Enviar</button> |
 	<a href="/Preinscripcion">Back to list</a>
 </form>
