@@ -108,13 +108,6 @@ module.exports = {
     });
   },
 
-  index: function(req, res, next) {
-    Alumno.find(function foundAlumnos(err, Alumnos) {
-      if (err) return next(err);
-      
-      res.json(Alumnos);
-    });
-  },
 
   listado: function(req, res) {
     res.view('Alumno/listado');

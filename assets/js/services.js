@@ -1,24 +1,18 @@
 (function () {
 
   angular.module('scholarNode.services', [])
-  .factory('alumnoService', ['$http', '$q', function ($htpp, $q){
+  .factory('alumnoService', function (){
 
-    var getAlumnos = function() {
-      var defer = $q.defer();
-
-      $http.get('/alumno').then(function(response) {
-        defer.resolve(response.data);
-      }, function(response) {
-        defer.reject(response);
-      });
-
-      return defer.promise;
-    };
+    getAlumnos = function() {
+      io.socket.get('/Alumnos', function(data){
+        return productos = data;
+      })
+    }
 
     return {
       getAlumnos: getAlumnos
     }
-  }]);
+  });
 
 
 
