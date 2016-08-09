@@ -1,7 +1,8 @@
 
-<div class="container" ng-controller="AlumnoController" >
+
 	<h3>Alumno</h3>
-	<table id="tableAlumno" class="display" cellspacing="0" width="100%">
+	<table id="tableAlumno" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+	
 		<thead>
 			<tr>
 				<th> Nombre </th>
@@ -49,9 +50,8 @@
 				<td>{{alumno.curp}}</td>
 				<td>{{alumno.domicilio}}</td>
 				<td>{{alumno.email}}</td>
-				<td>{{alumno.inscrito}}</td>
+				<td style="display: none;">{{alumno.inscrito}}</td>
 			</tr>
 
 		</tbody>
 	</table>
-</div>
