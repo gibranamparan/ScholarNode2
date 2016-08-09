@@ -2,12 +2,19 @@
 (function () {
 	'use strict';
 	angular.module('scholarNode.controllers', [])
-	.controller('AlumnoController', ['$scope', 'alumnoService', function ($scope, alumnoService) {
-		
+	.controller('AlumnoController', ['$scope', function ($scope) {
 
-		alumnoService.getAlumnos().then(function(data) {
+		getAlumnos();
+	    function getAlumnos(){
+		io.socket.get('/Alumno', function(data){
+
 			$scope.alumnos = data;
-		})
+			$scope.$apply();
+			
+		});
+	}
+			
+		
 
 	}])                                                         
 	.controller('PagoController', ['$scope', 'pagoService', function ($scope, pagoService) {
