@@ -108,9 +108,28 @@ module.exports = {
     });
   },
 
+  index: function(req, res, next) {
+    //Debe mostrar solo los primeros 10
+    Alumno.find(function foundAlumnos(err, Alumnos) {
+      if (err) return next(err);
+      
+      res.json(Alumnos);
+    });
+  },
+
 
   listado: function(req, res) {
     res.view('Alumno/listado');
+  },
+
+  listadoConBusqueda: function(req, res) {
+    nombrebuscado=res.param('nombre');
+    //buscar por contenido de subcadena
+    Alumno.find(function foundAlumnos(err, Alumnos) {
+      if (err) return next(err);
+      
+      res.json(Alumnos);
+    });
   },
 
   edit: function(req, res, next) {

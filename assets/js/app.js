@@ -1,29 +1,30 @@
 (function () {
   'use strict';
-  var app = angular.module('scholarNode', [
-   /** 'ngRoute',  */
+  angular.module('scholarNode', [
+    'ngRoute',  
     'scholarNode.controllers',
     'scholarNode.directives',
     'scholarNode.filters',
     'scholarNode.services'
-  ])
-  /**
-  app.config(['$routeProvider', function ($routeProvider) {
+    ])
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+
+   $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: true
+  });
+   $routeProvider
+   .when('/alumnos/index', {
+    controller: "AlumnoController",
+    templateUrl: "/templates/Alumno/listado.html"
+  }) 
+   .otherwise({ 
+    redirectTo: "/"
+  });
+
+ }])
 
 
-      $routeProvider 
-        .when('/', {
-          templateUrl: '/views/homepage'
-        })
-        .when('/Pago', {
-          templateUrl: '/views/Pago/index',
-          controller: 'PagoController'
-        })
-        .otherwise({ 
-          redirectTo: '/'
-        });
 
-    }]);
-    */
 
 })();
