@@ -14,6 +14,9 @@
     requireBase: true
   });
    $routeProvider
+   .when('/', {
+    templateUrl: "/templates/homepage.html"
+  }) 
    .when('/alumnos/index', {
     controller: "AlumnoController",
     templateUrl: "/templates/Alumno/listado.html"
