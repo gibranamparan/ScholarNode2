@@ -39,10 +39,10 @@
 			</tr>
 		</tfoot>
 		<tbody >
-			<tr ng-repeat="alumno in alumnos | filter:search">
+			<tr ng-repeat="alumno in alumnos | filter:search ">
 				<td>{{alumno.nombre}}</td>
 				<td>{{alumno.apellidoPaterno+" "+alumno.apellidoMaterno}}</td>
-				<td>{{alumno.fechaNacimiento}}</td>
+				<td>{{alumno.fechaNacimiento | date:'dd/MM/yyyy'}}</td>
 				<td>{{alumno.sexo}}</td>
 				<td>{{alumno.curp}}</td>
 				<td>{{alumno.domicilio}}</td>
