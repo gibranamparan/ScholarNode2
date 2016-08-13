@@ -110,11 +110,16 @@ module.exports = {
 
   index: function(req, res, next) {
     //Debe mostrar solo los primeros 10
-    Alumno.find(function foundAlumnos(err, Alumnos) {
+    var findLimitAlumnos = Alumno.find();
+    findLimitAlumnos.limit(10);
+    
+
+    findLimitAlumnos.exec(function callBack(err, Alumnos) {
       if (err) return next(err);
       
       res.json(Alumnos);
     });
+    
   },
 
 

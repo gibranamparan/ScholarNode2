@@ -19,8 +19,12 @@
   }) 
    .when('/alumnos/index', {
     controller: "AlumnoController",
-    templateUrl: "/templates/Alumno/listado.html"
-  }) 
+    templateUrl: "/templates/Alumno/index.html"
+  })
+   .when('/alumno/:dato', {
+    controller: "AlumnoController",
+    templateUrl: "/templates/Alumno/index.html"
+   })
    .otherwise({ 
     redirectTo: "/"
   });

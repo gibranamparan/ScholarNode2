@@ -2,10 +2,10 @@
 
 	angular.module('scholarNode.directives', [])
 
-	   .directive('hola', function () {
+	   .directive('listAlumnos', function () {
         return {
         restrict: 'E',
-        templateUrl: '/js/partials/home.html'
+        templateUrl: '/partials/Alumno/listAlumnos.html'
       };
     })
 })();
