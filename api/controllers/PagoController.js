@@ -24,45 +24,98 @@ module.exports = {
   },
 
   'validarPagoPreinscrito': function(req, res) {
-    console.log(req.param('id'));
+    //console.log(req.param('id'));
     Preinscripcion.findOne({id:req.param('id')}, function(err,Preinscrito){
       if (err) console.log(err);
-      var newAlumno = {
+      var newAlumno;
+      Grupo.findOne({carrera:Preinscrito.carrera}, function(err,Grupo){
+      if(err){
+        console.log("No hay grupos con esta carrera");
+        Grupo.create({nombre:Preinscrito.carrera.nombre+" 1-1",turno:"sin identificar",numAlumnos:50,carrera:Preinscrito.carrera},function newGrupo(err,GrupoCreado){
+          if(err){
+            console.log("no se pudo crear el Grupo porfavor llame a Erick, ya que el hizo este pedazo de codigo")
+          }else{
+            newAlumno = {
 
-      nombre: Preinscrito.nombre,
+            nombre: Preinscrito.nombre,
 
-      apellidoPaterno: Preinscrito.apellidoPaterno,
+            apellidoPaterno: Preinscrito.apellidoPaterno,
 
-      apellidoMaterno: Preinscrito.apellidoMaterno,
+            apellidoMaterno: Preinscrito.apellidoMaterno,
 
-      fechaNacimiento: Preinscrito.fechaNacimiento,
+            fechaNacimiento: Preinscrito.fechaNacimiento,
 
-      numeroHijos: Preinscrito.numeroHijos,
+            numeroHijos: Preinscrito.numeroHijos,
 
-      sexo: Preinscrito.sexo,
+            sexo: Preinscrito.sexo,
 
-      estadoCivil: Preinscrito.estadoCivil,
+            estadoCivil: Preinscrito.estadoCivil,
 
-      padreTutor: Preinscrito.padreTutor,
+            padreTutor: Preinscrito.padreTutor,
 
-      rfc: Preinscrito.rfc,
+            rfc: Preinscrito.rfc,
 
-      curp: Preinscrito.curp,
+            curp: Preinscrito.curp,
 
-      etnia: Preinscrito.etnia,
+            etnia: Preinscrito.etnia,
 
-      empresa: Preinscrito.empresa,
+            empresa: Preinscrito.empresa,
 
-      numDependientes: Preinscrito.numDependientes,
+            numDependientes: Preinscrito.numDependientes,
 
-      domicilio: Preinscrito.domicilio,
+            domicilio: Preinscrito.domicilio,
 
-      email: Preinscrito.email,
+            email: Preinscrito.email,
 
-      inscrito: false,
+            inscrito: false,
+
+            grupo:GrupoCreado,
+          }
+          }
+        });
+
+      } else{
+            newAlumno = {
+
+            nombre: Preinscrito.nombre,
+
+            apellidoPaterno: Preinscrito.apellidoPaterno,
+
+            apellidoMaterno: Preinscrito.apellidoMaterno,
+
+            fechaNacimiento: Preinscrito.fechaNacimiento,
+
+            numeroHijos: Preinscrito.numeroHijos,
+
+            sexo: Preinscrito.sexo,
+
+            estadoCivil: Preinscrito.estadoCivil,
+
+            padreTutor: Preinscrito.padreTutor,
+
+            rfc: Preinscrito.rfc,
+
+            curp: Preinscrito.curp,
+
+            etnia: Preinscrito.etnia,
+
+            empresa: Preinscrito.empresa,
+
+            numDependientes: Preinscrito.numDependientes,
+
+            domicilio: Preinscrito.domicilio,
+
+            email: Preinscrito.email,
+
+            inscrito: false,
+
+            grupo:Grupo,
         }
+      }
 
+      });
       Alumno.create(newAlumno, function AlumnoCreated(err, Alumno){
+
 
       var paramObj = {
 
