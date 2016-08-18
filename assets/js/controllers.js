@@ -2,9 +2,10 @@
 (function () {
 	'use strict';
 	angular.module('scholarNode.controllers', [])
-	.controller('AlumnoController', ['$scope', 'alumnoService', function ($scope, alumnoService) {
+	.controller('AlumnoListController', ['$scope', 'alumnoService', function ($scope, alumnoService) {
 		
 		alumnoService.getAlumnos().then(function(data) {
+			
 			$scope.alumnos = data;
 		}, function() {
 			$scope.error = 'unable to get the alumnos';
@@ -12,7 +13,16 @@
 		
 		
 
-	}])                                                         
+	}])  
+	.controller('AlumnoShowController', ['$scope', '$routeParams', 'alumnoService', function ($scope, $routeParams, alumnoService) {
+		var id = $routeParams.id;
+		alumnoService.showAlumno(id).then(function(data) {
+			$scope.alumno = data;
+			
+		}, function() {
+			$scope.error = 'unable to get the alumno';
+		})
+	}])                                                       
 	.controller('PagoController', ['$scope', 'pagoService', function ($scope, pagoService) {
 
 		pagoService.allPagos().then(function (data) {

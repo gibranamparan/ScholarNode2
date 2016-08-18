@@ -9,21 +9,21 @@
     ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
-   $locationProvider.html5Mode({
+   /**$locationProvider.html5Mode({
     enabled: true,
     requireBase: true
-  });
+  });*/
    $routeProvider
    .when('/', {
     templateUrl: "/templates/homepage.html"
   }) 
-   .when('/alumnos/index', {
-    controller: "AlumnoController",
+   .when('/alumno/index', {
+    controller: "AlumnoListController",
     templateUrl: "/templates/Alumno/index.html"
   })
-   .when('/alumno/:dato', {
-    controller: "AlumnoController",
-    templateUrl: "/templates/Alumno/index.html"
+   .when('/alumno/show/:id', {
+    controller: "AlumnoShowController",
+    templateUrl: "/templates/Alumno/show.html"
    })
    .otherwise({ 
     redirectTo: "/"
