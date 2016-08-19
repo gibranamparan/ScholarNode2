@@ -29,7 +29,7 @@ module.exports = {
       if (err) console.log(err);
       var newAlumno;
       Grupo.findOne({carrera:Preinscrito.carrera}, function(err,Grupo){
-      if(err){
+      if(Grupo==null){
         console.log("No hay grupos con esta carrera");
         Grupo.create({nombre:Preinscrito.carrera.nombre+" 1-1",turno:"sin identificar",numAlumnos:50,carrera:Preinscrito.carrera},function newGrupo(err,GrupoCreado){
           if(err){
