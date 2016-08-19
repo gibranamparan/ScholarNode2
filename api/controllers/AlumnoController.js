@@ -101,7 +101,7 @@ module.exports = {
       console.log(Pagos);
       console.log("documentos");
       console.log(Documentos);
-      res.json(obj);
+      res.send(obj);
 
     //});
     });

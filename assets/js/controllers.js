@@ -9,20 +9,20 @@
 			$scope.alumnos = data;
 		}, function() {
 			$scope.error = 'unable to get the alumnos';
-		})
-		
-		
-
-	}])  
-	.controller('AlumnoShowController', ['$scope', '$routeParams', 'alumnoService', function ($scope, $routeParams, alumnoService) {
+		});
+	}])
+	.controller('AlumnoShowController', function ($scope, $routeParams, alumnoService) {
 		var id = $routeParams.id;
 		alumnoService.showAlumno(id).then(function(data) {
+			alert(data);
 			$scope.alumno = data;
 			
 		}, function() {
-			$scope.error = 'unable to get the alumno';
-		})
-	}])                                                       
+			var mensaje='unable to get the alumno';
+			alert(mensaje);
+			$scope.error = mensaje;
+		});
+	})                                     
 	.controller('PagoController', ['$scope', 'pagoService', function ($scope, pagoService) {
 
 		pagoService.allPagos().then(function (data) {
@@ -30,11 +30,5 @@
 
 		});
 
-	}])
-
-
-
-
-
-
+	}]);
 })();

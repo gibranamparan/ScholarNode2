@@ -18,10 +18,14 @@
     }
 
     function showAlumno (id) {
+      alert('id inservices: '+id);
       var defer = $q.defer();
     
-      $http.get('/alumno/show/:id').then(function(response) {
-        alert('Exito')
+      $http({ url:'/alumno/show/',
+              params:{id:id},
+              method:'get',
+            }).then(function(response) {
+        alert('Exito');
         defer.resolve(response.data);
       }, function(response) {
         alert('Error');
@@ -35,11 +39,8 @@
     return {
       getAlumnos: getAlumnos,
       showAlumno: showAlumno
-    }
+    };
   }]);
-
-
-
 })();
 
 
