@@ -1,0 +1,74 @@
+<form ng-submit="save()" method="post">
+	<div class="form-group">
+	<h2>New Alumno</h2>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="nombre" ng-model="form.nombre" name="nombre">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="apellidoPaterno" ng-model="form.apellidoPaterno" name="apellidoPaterno">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="apellidoMaterno" ng-model="form.apellidoMaterno" name="apellidoMaterno">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="date" class="form-control" placeholder="fechaNacimiento" ng-model="form.fechaNacimiento" name="fechaNacimiento">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="numeroHijos" ng-model="form.numeroHijos" name="numeroHijos">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="sexo" ng-model="form.sexo" name="sexo">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="estadoCivil" ng-model="form.estadoCivil" name="estadoCivil">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="padreTutor" ng-model="form.padreTutor" name="padreTutor">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="rfc" ng-model="form.rfc" name="rfc">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="curp" ng-model="form.curp" name="curp">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="etnia" ng-model="form.etnia" name="etnia">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="empresa" ng-model="form.empresa" name="empresa">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="numDependientes" ng-model="form.numDependientes" name="numDependientes">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="domicilio" ng-model="form.domicilio" name="domicilio">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="email" ng-model="form.email" name="email">
+	</div>
+
+	<div class="control-group" style = "width: 300px;">
+	<input type="text" class="form-control" placeholder="inscrito" ng-model="form.inscrito" name="inscrito">
+	</div>
+
+
+
+	</div>
+	<input type="submit" value="Enviar" class="btn btn-default"/> | 
+	<a href="#/alumno/index">Back to list</a>
+</form>
