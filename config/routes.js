@@ -60,6 +60,5 @@ module.exports.routes = {
   'get /auth/:provider/callback': 'AuthController.callback',
 
   'get /alumno/listado': 'AlumnoController.listado',
-  'post /alumno/listado': 'AlumnoController.listadoConBusqueda',
-  'post /alumno/show/:id': 'AlumnoController.show'
+  'post /alumno/listado': 'AlumnoController.listadoConBusqueda'
 };

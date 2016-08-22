@@ -3,7 +3,7 @@
 		<tr>
 			<th> Nombre </th>
 
-			<th> Apellido </th>
+			<th> Apellidos </th>
 
 			<th> Fecha Nacimiento </th>
 
@@ -17,14 +17,14 @@
 
 			<th> Inscrito </th>
 
-			<th><a href="/Alumno/new/" class="btn btn-success btn-sm" role="button">New Alumno</a></th>
+			<th><a href="#/alumno/create/" class="btn btn-success btn-sm" role="button">New Alumno</a></th>
 		</tr>
 	</thead>
 	<tfoot>
 		<tr>
 			<th> Nombre </th>
 
-			<th> Apellido </th>
+			<th> Apellidos </th>
 
 			<th> Fecha Nacimiento </th>
 
@@ -52,8 +52,8 @@
 			<td>
 				<div class="btn-group">
 				<a href="#/alumno/show/{{alumno.id }}" type="label" class="label label-primary">Show</a>
-				<a href="#/alumno/edit/{{Alumno.id }}" type="label" class="label label-success">Edit</a>
-				<a href="#/alumno/inscrito/{{ Alumno.id }}" type="label" class="label label-info">Inscribir</a>
+				<a href="#/alumno/edit/{{alumno.id }}" type="label" class="label label-success">Edit</a>
+				<a href="#/alumno/destroy/{{alumno.id }}" type="label" class="label label-danger">Eliminar</a>
 				</div>
 			</td>
 		</tr>

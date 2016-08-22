@@ -73,11 +73,11 @@ module.exports = {
         req.session.flash = {
           err: err
         };
-        return res.redirect('/Alumno/new');
+       
       }
 
       // res.json(Alumno);
-      res.redirect('/Alumno/show/' + Alumno.id);
+     
 
     });
   },
@@ -111,7 +111,7 @@ module.exports = {
   index: function(req, res, next) {
     //Debe mostrar solo los primeros 10
     var findLimitAlumnos = Alumno.find();
-    findLimitAlumnos.limit(10);
+    findLimitAlumnos.limit(20);
     
 
     findLimitAlumnos.exec(function callBack(err, Alumnos) {
@@ -143,9 +143,7 @@ module.exports = {
       if (err) return next(err);
       if (!Alumno) return next('Alumno doesn\'t exist.');
 
-      res.view({
-        Alumno: Alumno
-      });
+      res.json(Alumno);
     });
   },
 
@@ -195,10 +193,10 @@ module.exports = {
           err: err
         };
 
-        return res.redirect('/Alumno/edit/' + req.param('id'));
+        //return res.redirect('/Alumno/edit/' + req.param('id'));
       }
 
-      res.redirect('/Alumno/show/' + req.param('id'));
+      //res.redirect('/Alumno/show/' + req.param('id'));
     });
   },
 
@@ -213,7 +211,7 @@ module.exports = {
         if (err) return next(err);
     });        
 
-      res.redirect('/Alumno');
+      
 
     });
   }
